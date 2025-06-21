@@ -40,7 +40,7 @@ Whatsapp has quickly become the world’s most popular text and voice messaging 
 ### Beginning. How do I export my conversations? From Where To Obtain Data?
 
 <p align="center">
-<img src="assets/extras/4-the-office.gif" width=350>
+<img src="4-the-office.gif" width=350>
 </p>
 
 - The first step is **Data Retrieval & Preprocessing**, that is to **gather the data**. WhatsApp allows you to **export your chats** through a **.txt format**. 
@@ -48,19 +48,19 @@ Whatsapp has quickly become the world’s most popular text and voice messaging 
 - Go to the respective chat, which you want to export!
 
 <p align="center">
-<img src="assets/extras/whatsapp-options.jpg" width=150 align="center">
+<img src="whatsapp-options.jpg" width=150 align="center">
 </p>
 
 - Tap on **options**, click on **More**, and **Export Chat.**
 
 <p align="center">
-<img src="assets/extras/whatsapp-export-chat.jpg" width=150>
+<img src="whatsapp-export-chat.jpg" width=150>
 </p>
 
 - I will be Exporting **Without Media.**
 
 <p align="center">
-<img src="assets/extras/whatsapp-media.jpg " width=200 length=150 align="center">
+<img src="whatsapp-media.jpg " width=200 length=150 align="center">
 </p>
 
 #### NOTE:
@@ -70,7 +70,7 @@ Whatsapp has quickly become the world’s most popular text and voice messaging 
 
 ### Opening this .txt file up, you get messages in a format that looks like this:
 
-<img src="assets/extras/textfile.png" align="center">
+<img src="textfile.png" align="center">
 
 
 # *Exploratory Data Analysis*
@@ -95,7 +95,7 @@ We will be using :
 6. **datetime** for datetime manipulation.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (1).png">
+<img src="carbon (1).png">
 </p>
 
 ### *Preparation and reading data*
@@ -105,7 +105,7 @@ Since WhatsApp texts are multi-line, you cannot just read the file line by line 
 While reading each line, I split it based on a comma and take the first item returned from the `split()` function. If the line is a new message, the first item would be a valid date, and it will be appended as a new message to the list of messages. If it’s not, the message is part of the previous message, and hence, will be appended to the end of the previous message as one continuous message.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (0).png">
+<img src="carbon (0).png">
 </p>
 
 # *Pre-Processing*
@@ -113,7 +113,7 @@ While reading each line, I split it based on a comma and take the first item ret
 Firstly, let’s load our .txt into a DataFrame.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (2).png">
+<img src="carbon (2).png">
 </p>
 
 The dataset now contains 3 columns - DateTime String, User, and Message sent and their respective entries in 13655 rows.
@@ -121,13 +121,13 @@ The dataset now contains 3 columns - DateTime String, User, and Message sent and
 **Let’s create some helper columns for better analysis!**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (3).png">
+<img src="carbon (3).png">
 </p>
 
 Now that we have a clean DataFrame to work with, it’s time to perform analysis on it. **Let’s start Visualizing!**
 
 <p align="center">
-<img src="assets/extras/1-gina.gif" width=350>
+<img src="1-gina.gif" width=350>
 </p>
 
 # *Exploratory Data Analysis*
@@ -139,13 +139,13 @@ At this point, I think I’m ready to start my analysis so I will plot a simple 
 I expect to see a nice line graph with crests and troughs in odd places.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (4).png">
+<img src="carbon (4).png">
 </p>
 <p align="center">
-<img src="assets/code_snippets/carbon (5).png">
+<img src="carbon (5).png">
 </p>
 <p align="center">
-<img src="assets/plots/msg_plots.png">
+<img src="msg_plots.png">
 </p>
 
 ## Top 10 Most Active Days
@@ -153,15 +153,15 @@ Grouping the data set by date and sorting values according to the number of mess
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (6).png">
+<img src="carbon (6).png">
 </p>
 
 <p align="center">
-<img src="assets/code_snippets/carbon (7).png">
+<img src="carbon (7).png">
 </p>
 
 <p align="center">
-<img src="assets/plots/top10_days.png">
+<img src="top10_days.png">
 </p>
 
 Apparently, the group was very active on 13th September’20 because we were discussing fundamental yet tricky and brain-wracking “Guess the Output” Java questions!
@@ -172,7 +172,7 @@ Before analyzing, the top users, let’s find out how many ghosts are there in t
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (8).png">
+<img src="carbon (8).png">
 </p>
 
 #### Shocking Result
@@ -187,30 +187,30 @@ Before analyzing, the top users, let’s find out how many ghosts are there in t
 Grouping the dataset by the user, and sorting according to the message count.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (9).png">
+<img src="carbon (9).png">
 </p>
 
 And, we will be *replacing names by their initials* for **Better Visualization**, and also to maintain anonymity.
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (10).png">
+<img src="carbon (10).png">
 </p>
 
 Also, I will be customizing the styles for **Better Visualization and More Readability** using *matplotlib*.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (11).png">
+<img src="carbon (11).png">
 </p>
 
 **My first plot will be the total number of messages sent per person.** For this, a simple *seaborn countplot* will suffice.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (13).png">
+<img src="carbon (13).png">
 </p>
 
 <p align="center">
-<img src="assets/plots/top10users.png">
+<img src="top10users.png">
 </p>
 
 **TK** beats everyone by a mile, with **2500+ messages**, followed by **DL** with around **2000 messages**.
@@ -233,7 +233,7 @@ I could’ve used *seaborn’s color palette* but:
 I’m defining this function ***to maintain consistent colors for each person across all plots***. Since the order will vary depending on the plot, this is passed to the function which will *reorder colors in a particular order so that the color of a certain person remains the same no matter the plot*. This will help maintain ***consistency and readability*** amongst the many graphs I will be plotting.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (14).png">
+<img src="carbon (14).png">
 </p>
 
 Next, I made a dictionary where **each key is the name and the value for each would be their assigned color**. I create a function that reorders colors given a list of names to match the ordering of the plot. 
@@ -241,20 +241,20 @@ Next, I made a dictionary where **each key is the name and the value for each wo
 This function takes the ordered names as input and returns a reordered list of colors. This list has to be passed into the **`palette`** argument in a **seaborn plotting function.**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (15).png">
+<img src="carbon (15).png">
 </p>
 
 Now we have a *nice set of colors for each person* which we can visualize using **palplot**.
 
 
 <p align="center">
-<img src="assets/plots/top10_palette.png">
+<img src="top10_palette.png">
 </p>
 
 The next one would be the average message length for each person. For this, I create a new column called `message_length` which contains the length of each message which I get by using a lambda function which returns the length of a given message. I just group the DataFrame by name and then apply `mean()` on the returned groupby object.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (16).png">
+<img src="carbon (16).png">
 </p>
 
 - **Plotting multiple charts in a grid**
@@ -262,13 +262,13 @@ The next one would be the average message length for each person. For this, I cr
 Matplotlib and Seaborn also support plotting multiple charts in a grid, using `plt.subplots`, which returns a set of axes that can be used for plotting.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (17).png">
+<img src="carbon (17).png">
 </p>
 
 #### Let’s see the plots, simultaneously for **some interesting results**!
 
 <p align="center">
-<img src="assets/plots/top10_msg_plots_diff.png">
+<img src="top10_msg_plots_diff.png">
 </p>
 
 It’s really interesting to see plots like this side by side, because here comes the twist:
@@ -278,13 +278,13 @@ It’s really interesting to see plots like this side by side, because here come
 Here is a snippet of how TK sends messages:
 
 <p>
-<img src="assets/extras/TK_MSG_Snippet.png" width=350>
+<img src="TK_MSG_Snippet.png" width=350>
 </p>
 
 - Also, we can see that, I have sent *less number of messages (7th) on average* while having a ***relatively longer message length (1st)***.
 
 <p align="center">
-<img src="assets/extras/2-bragging.gif">
+<img src="2-bragging.gif">
 </p>
 
 Alright, moving on to a more detailed analysis of the dataset!
@@ -294,18 +294,18 @@ Alright, moving on to a more detailed analysis of the dataset!
 The exported chats were exported without any media files. Any message that contained media was indicated with *‘<Media Omitted> ’*. **We can use this to filter out and see who sends the most media.**
 
 <p align="center">
-<img src="assets/code_snippets/carbon (18).png">
+<img src="carbon (18).png">
 </p>
 
 ### Which user sends the most media?
 Again, a simple plot using seaborn, but a different Color Palette: *CMRmap*.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (19).png">
+<img src="carbon (19).png">
 </p>
 
 <p align="center">
-<img src="assets/plots/top10media.png">
+<img src="top10media.png">
 </p>
 
 **TK and DL** are beating everyone by a *huge margin*. They, also rank the *top in total messages*, though *last in average message length*. ***Most dedicated contributor award goes to TK and DL!***
@@ -319,23 +319,23 @@ Again, a simple plot using seaborn, but a different Color Palette: *CMRmap*.
 Will be using the `emoji` module, that was imported earlier.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (20).png">
+<img src="carbon (20).png">
 </p>
 
 Will create another helper column using `emoji.demojize("<emoji>")`, since **emojis will not be rendered in the plots**.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (21).png">
+<img src="carbon (21).png">
 </p>
 
 Since the emojis **will not be rendered into the plots**, here is how the *top10emojis dataset looks like*!
 
 <p align="center">
-<img src="assets/extras/top10emojis_df.png">
+<img src="top10emojis_df.png">
 </p>
 
 <p align="center">
-<img src="assets/extras/3-gina-emoji.gif">
+<img src="3-gina-emoji.gif">
 </p>
 
 ### Which Emoji is the most used in the chat?
@@ -343,11 +343,11 @@ Since the emojis **will not be rendered into the plots**, here is how the *top10
 This time, it will be plotted a bit differently. Numbers will be plotted on x-direction.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (22).png">
+<img src="carbon (22).png">
 </p>
 
 <p align="center">
-<img src="assets/plots/top10emoji.png">
+<img src="top10emoji.png">
 </p>
 
 - Not that it is worth anything, but “😂” beats everyone by a *huge margin!*
@@ -359,17 +359,17 @@ Now, I will be analyzing the timely usage of the groups.
 #### Pre-processing for most active hours.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (23).png">
+<img src="carbon (23).png">
 </p>
 
 <p align="center">
-<img src="assets/code_snippets/carbon (24).png">
+<img src="carbon (24).png">
 </p>
 
 ### Which hour of the day are most messages exchanged?
 
 <p align="center">
-<img src="assets/plots/most_active_hours.png">
+<img src="most_active_hours.png">
 </p>
 
 Interestingly, the group is most active around **midnight**, followed by *afternoon*.
@@ -380,13 +380,13 @@ Now, irrespective of the number of messages per day or month, we want the order 
 
 
 <p align="center">
-<img src="assets/code_snippets/carbon (25).png">
+<img src="carbon (25).png">
 </p>
 
 - Plotting multiple charts using `plt.subplots`.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (26).png">
+<img src="carbon (26).png">
 </p>
 
 
@@ -395,7 +395,7 @@ Now, irrespective of the number of messages per day or month, we want the order 
 Now, we will be plotting ***grouped by day and respective group by month simultaneously***, to see some interesting results.
 
 <p align="center">
-<img src="assets/plots/days_and_month.png">
+<img src="days_and_month.png">
 </p>
 
 ## *Inferences*
@@ -412,13 +412,13 @@ To get a clearer understanding, we will plot a combined graph — **Heatmap**.
 #### Now, we will plot a heatmap, combining the above to bar plots, for a better understanding!
 
 <p align="center">
-<img src="assets/code_snippets/carbon (27).png">
+<img src="carbon (27).png">
 </p>
 
 ### Heatmap of Month sent and Day sent
 
 <p align="center">
-<img src="assets/plots/month_day_heatmap.png">
+<img src="month_day_heatmap.png">
 </p>
 
 ##### Inferences
@@ -432,13 +432,13 @@ To get a clearer understanding, we will plot a combined graph — **Heatmap**.
 I will be using the `wordcloud` module, to create a WordCloud of the **most used words**! I will be *adding some common words, to the stopwords*, such that it will not be included the WordCloud.
 
 <p align="center">
-<img src="assets/code_snippets/carbon (28).png">
+<img src="carbon (28).png">
 </p>
 
 ### Most Used Words in the chat
 
 <p align="center">
-<img src="assets/plots/wordcloud.png">
+<img src="wordcloud.png">
 </p>
 
 # *Conclusion*
@@ -446,7 +446,7 @@ I will be using the `wordcloud` module, to create a WordCloud of the **most used
 **That’s it from my end! I hope you learned and enjoyed a lot!**
 
 <p align="center">
-<img src="assets/extras/5-the-office.gif">
+<img src="5-the-office.gif">
 </p>
 
 It’s really interesting to see the texting habits of people and incidents of daily life reflected in the text. I suggest you take a look at my code and apply it to your own group chats. However, some modifications will have to be done at the DataFrame creation part. 
@@ -470,4 +470,4 @@ If you’re interested, shoot me a message and I’ll help you out.
 ***Thank you for reading!*** *Let me know what you thought about this project.*
 
 # Author 
-- [Tushar Nankani](https://www.linkedin.com/in/tusharnankani/)
+- [Shibam Nath](https://www.linkedin.com/in/nathshibam/)
