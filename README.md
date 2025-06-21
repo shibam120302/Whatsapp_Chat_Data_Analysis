@@ -1,11 +1,5 @@
 # A Comprehensive Data Analysis on a WhatsApp Group Chat
 
-- Have a look at a **detailed [Medium Article](https://medium.com/@tusharnankani/an-exhaustive-whatsapp-chat-data-analysis-f8421a845c30)** for this project!
-- [Whatsapp Chat Data Analysis - Notebook on GitHub](https://github.com/tusharnankani/whatsapp-chat-data-analysis/blob/main/whatsapp-data-analysis.ipynb)
-
-If the Notebook fails to load:
-- Check the complete code, on [this basic HTML Page](https://tusharnankani.github.io/whatsapp-chat-data-analysis/).
-- [Whatsapp Chat Data Analysis - Notebook on Jovian](https://jovian.ml/tusharnankani3/whatsapp-data-analysis)
 
 ## *Overview*
 
